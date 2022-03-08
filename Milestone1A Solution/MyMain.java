@@ -23,6 +23,14 @@ public class MyMain {
         Thread.sleep(time * 1000);
     }
 
+//    static class MyThread implements Runnable {
+//
+//        @Override
+//        public void run() {
+//
+//        }
+//    }
+
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 
         // Log File generator code
@@ -34,7 +42,6 @@ public class MyMain {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         // Parsing YAML File
         InputStream inputstream = new FileInputStream(new File("./src/main/resources/Milestone1A.yaml"));
@@ -65,21 +72,25 @@ public class MyMain {
     // Process Task
     private static void processTask(String root, Map<?, ?> allTaskMap, String taskname, String parent) throws InterruptedException {
         logger.info(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSS")) + ";" + parent + "." + taskname +  " Entry");
+
         Map<?, ?> alltasks = (Map<?, ?>) allTaskMap.get(taskname);
         Map<?, ?> mytask = (Map<?, ?>) alltasks.get("Inputs");
 
         String FunctionInput = (String) mytask.get("FunctionInput");
         String exectime = (String) mytask.get("ExecutionTime");
+
         long time = Long.parseLong(exectime);
 
         String str = parent + "." + taskname + " Executing TimeFunction"  + "(" + FunctionInput + ", " + exectime + ")";
         TimeFunction(str, time);
+
         logger.info(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSS")) + ";" + parent + "." + taskname +  " Exit");
     }
 
     // Process Flow
     private static void processFlow(Map<?, ?> allTaskMap, String taskname, String parent) throws InterruptedException {
         logger.info(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSS")) + ";" + parent + "." + taskname + " Entry");
+
         Map<?, ?> activitiesMap2 = (Map<?, ?>) allTaskMap.get(taskname);
         Map<?, ?> allTaskMap2 = (Map<?, ?>) activitiesMap2.get("Activities");
 
