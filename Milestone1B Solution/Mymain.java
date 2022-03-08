@@ -25,6 +25,7 @@ public class MyMain {
         Thread.sleep(time * 1000);
     }
 
+    // Thread to run activites of a Flow concurrently
     static class MyThread extends Thread {
 
         private Map<?, ?> allTaskMap;
@@ -116,19 +117,21 @@ public class MyMain {
         Map<?, ?> activitiesMap2 = (Map<?, ?>) allTaskMap.get(taskname);
         Map<?, ?> allTaskMap2 = (Map<?, ?>) activitiesMap2.get("Activities");
 
+        // Concurrent Code
         String executionType = (String) activitiesMap2.get("Execution");
-        List<Thread> threads = new ArrayList<>();
+        List<Thread> l = new ArrayList<>();
         if(executionType.equals("Concurrent")) {
             for (Object name2 : allTaskMap2.keySet()) {
                 String taskname2 = (String) name2;
-                threads.add(new MyThread(allTaskMap2, taskname2, parent + "." + taskname));
-            }
-            for(Thread t: threads) {
+                Thread t = new MyThread(allTaskMap2, taskname2, parent + "." + taskname);
+                l.add(t);
                 t.start();
             }
-            for(Thread t: threads) {
+
+            // Waiting for all child elements
+            for(Thread t : l)
                 t.join();
-            }
+
         } else {
             for (Object name2 : allTaskMap2.keySet()) {
                 String taskname2 = (String) name2;
@@ -140,6 +143,7 @@ public class MyMain {
                 }
             }
         }
+
         logger.info(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSSSSS")) + ";" + parent + "." + taskname + " Exit");
     }
 }
