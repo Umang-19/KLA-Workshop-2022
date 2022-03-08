@@ -1,26 +1,26 @@
-Mar 08, 2022 11:18:05 AM MyMain main
+Mar 08, 2022 11:24:22 AM MyMain main
 INFO: M1A_Workflow  Entry
-Mar 08, 2022 11:18:05 AM MyMain main
+Mar 08, 2022 11:24:22 AM MyMain main
 INFO: TaskA  Entry
-Mar 08, 2022 11:18:05 AM MyMain TimeFunction
-INFO: M1A_Workflow.TaskA.Executing TaskA_Input(1)
-Mar 08, 2022 11:18:06 AM MyMain main
+Mar 08, 2022 11:24:22 AM MyMain TimeFunction
+INFO: M1A_Workflow.TaskA Executing Time Function(1)
+Mar 08, 2022 11:24:23 AM MyMain main
 INFO: TaskB  Entry
-Mar 08, 2022 11:18:06 AM MyMain TimeFunction
-INFO: M1A_Workflow.TaskB.Executing TaskB_Input(2)
-Mar 08, 2022 11:18:08 AM MyMain main
+Mar 08, 2022 11:24:23 AM MyMain TimeFunction
+INFO: M1A_Workflow.TaskB Executing Time Function(2)
+Mar 08, 2022 11:24:25 AM MyMain main
 INFO: FlowA  Entry
-Mar 08, 2022 11:18:08 AM MyMain main
+Mar 08, 2022 11:24:25 AM MyMain main
 INFO: TaskC  Entry
-Mar 08, 2022 11:18:08 AM MyMain TimeFunction
-INFO: M1A_Workflow.FlowA.TaskC.Executing TaskC_Input(3)
-Mar 08, 2022 11:18:11 AM MyMain main
+Mar 08, 2022 11:24:25 AM MyMain TimeFunction
+INFO: M1A_Workflow.FlowA.TaskC Executing Time Function(3)
+Mar 08, 2022 11:24:28 AM MyMain main
 INFO: TaskC  Exit
-Mar 08, 2022 11:18:11 AM MyMain main
+Mar 08, 2022 11:24:28 AM MyMain main
 INFO: TaskD  Entry
-Mar 08, 2022 11:18:11 AM MyMain TimeFunction
-INFO: M1A_Workflow.FlowA.TaskD.Executing TaskD_Input(4)
-Mar 08, 2022 11:18:15 AM MyMain main
+Mar 08, 2022 11:24:28 AM MyMain TimeFunction
+INFO: M1A_Workflow.FlowA.TaskD Executing Time Function(4)
+Mar 08, 2022 11:24:32 AM MyMain main
 INFO: TaskD  Exit
-Mar 08, 2022 11:18:15 AM MyMain main
+Mar 08, 2022 11:24:32 AM MyMain main
 INFO: FlowA  Exit
