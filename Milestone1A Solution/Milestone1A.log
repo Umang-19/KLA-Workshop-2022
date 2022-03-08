@@ -1,26 +1,32 @@
-Mar 08, 2022 11:24:22 AM MyMain main
-INFO: M1A_Workflow  Entry
-Mar 08, 2022 11:24:22 AM MyMain main
-INFO: TaskA  Entry
-Mar 08, 2022 11:24:22 AM MyMain TimeFunction
-INFO: M1A_Workflow.TaskA Executing Time Function(1)
-Mar 08, 2022 11:24:23 AM MyMain main
-INFO: TaskB  Entry
-Mar 08, 2022 11:24:23 AM MyMain TimeFunction
-INFO: M1A_Workflow.TaskB Executing Time Function(2)
-Mar 08, 2022 11:24:25 AM MyMain main
-INFO: FlowA  Entry
-Mar 08, 2022 11:24:25 AM MyMain main
-INFO: TaskC  Entry
-Mar 08, 2022 11:24:25 AM MyMain TimeFunction
-INFO: M1A_Workflow.FlowA.TaskC Executing Time Function(3)
-Mar 08, 2022 11:24:28 AM MyMain main
-INFO: TaskC  Exit
-Mar 08, 2022 11:24:28 AM MyMain main
-INFO: TaskD  Entry
-Mar 08, 2022 11:24:28 AM MyMain TimeFunction
-INFO: M1A_Workflow.FlowA.TaskD Executing Time Function(4)
-Mar 08, 2022 11:24:32 AM MyMain main
-INFO: TaskD  Exit
-Mar 08, 2022 11:24:32 AM MyMain main
-INFO: FlowA  Exit
+Mar 08, 2022 12:15:20 PM MyMain main
+INFO: 2022-03-08T12:15:19.984244200;M1A_Workflow  Entry
+Mar 08, 2022 12:15:20 PM MyMain main
+INFO: 2022-03-08T12:15:20.044083600;M1A_Workflow.TaskA  Entry
+Mar 08, 2022 12:15:20 PM MyMain TimeFunction
+INFO: 2022-03-08T12:15:20.060040800;M1A_Workflow.TaskA Executing TimeFunction(1)
+Mar 08, 2022 12:15:21 PM MyMain processTask
+INFO: 2022-03-08T12:15:21.064328700;TaskA  Exit
+Mar 08, 2022 12:15:21 PM MyMain main
+INFO: 2022-03-08T12:15:21.066322800;M1A_Workflow.TaskB  Entry
+Mar 08, 2022 12:15:21 PM MyMain TimeFunction
+INFO: 2022-03-08T12:15:21.068317800;M1A_Workflow.TaskB Executing TimeFunction(2)
+Mar 08, 2022 12:15:23 PM MyMain processTask
+INFO: 2022-03-08T12:15:23.079607100;TaskB  Exit
+Mar 08, 2022 12:15:23 PM MyMain main
+INFO: 2022-03-08T12:15:23.083607100;M1A_Workflow.FlowA  Entry
+Mar 08, 2022 12:15:23 PM MyMain processFlow
+INFO: 2022-03-08T12:15:23.087594500;TaskC  Entry
+Mar 08, 2022 12:15:23 PM MyMain TimeFunction
+INFO: 2022-03-08T12:15:23.092581100;FlowA.TaskC Executing TimeFunction(3)
+Mar 08, 2022 12:15:26 PM MyMain processTask
+INFO: 2022-03-08T12:15:26.097213700;TaskC  Exit
+Mar 08, 2022 12:15:26 PM MyMain processFlow
+INFO: 2022-03-08T12:15:26.098216900;TaskD  Entry
+Mar 08, 2022 12:15:26 PM MyMain TimeFunction
+INFO: 2022-03-08T12:15:26.099212700;FlowA.TaskD Executing TimeFunction(4)
+Mar 08, 2022 12:15:30 PM MyMain processTask
+INFO: 2022-03-08T12:15:30.110856100;TaskD  Exit
+Mar 08, 2022 12:15:30 PM MyMain processFlow
+INFO: 2022-03-08T12:15:30.114873500;FlowA  Exit
+Mar 08, 2022 12:15:30 PM MyMain main
+INFO: 2022-03-08T12:15:30.118834200;M1A_Workflow  Exit
